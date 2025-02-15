@@ -1,0 +1,40 @@
+---
+
+---
+
+<header class="flex justify-between items-center px-8 md:px-20 xl:px-60 h-20 bg-gray-100 shadow-md">
+
+    <a href="#" class="text-2xl font-bold text-gray-800">Nutribaby</a>
+
+    <nav class="hidden md:flex items-center space-x-6 text-gray-600 font-medium">
+        <a href="#" class="hover:text-[#1D78AC] transition">Inicio</a>
+        <a href="#" class="hover:text-[#1D78AC] transition">Características</a>
+        <a href="#" class="hover:text-[#1D78AC]  transition">Planes</a>
+        <a href="#" class="hover:text-[#1D78AC]  transition">Equipo</a>
+        <a href="#" class="hover:bg-[#154e6f] text-white bg-[#1D78AC] px-4 py-2 rounded-xl transition">Descargar</a>
+    </nav>
+
+    <button id="menu-toggle" class="md:hidden text-gray-600">
+        ☰
+    </button>
+	<nav id="mobile-menu" class="absolute top-20 left-0 w-full bg-white shadow-md hidden flex-col items-center md:hidden">
+        <a href="#" class="py-3 text-gray-600 hover:text-blue-500">Inicio</a>
+        <a href="#" class="py-3 text-gray-600 hover:text-blue-500">Características</a>
+        <a href="#" class="py-3 text-gray-600 hover:text-blue-500">Planes</a>
+        <a href="#" class="py-3 text-gray-600 hover:text-blue-500">Equipo</a>
+        <a href="#" class="py-3 text-white bg-[#1D78AC] px-4 mb-4 rounded-lg hover:bg-blue-600 transition">Descargar</a>
+    </nav>
+</header>
+
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle") as HTMLButtonElement;
+    const menu = document.getElementById("mobile-menu") as HTMLElement;
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden"); 
+            menu.classList.toggle("flex");
+        });
+	}
+</script>
