@@ -4,18 +4,15 @@ import Feature from '../components/Feature.astro';
 const features = await getCollection('features');
 ---
 
-<section class="pt-12 sm:text-left">
+<section class="pt-12 sm:text-left mb-30">
 	<h2 id="features" class="mb-8n text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-bold font-heading">
 		Características	
 	</h2>	
 	
 	<div class=" md:flex flex-wrap">
 		{features.map((feature, index) => {
-			const { data } = feature as typeof feature;
-			const { title, description, image } = data;
-
 			return(
-				<Feature key={index} title={title} description={description} image={image} />
+			<Feature {...feature.data}/>
 			);
 		})}
 	</div>
