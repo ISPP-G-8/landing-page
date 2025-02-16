@@ -8,6 +8,16 @@ const features = defineCollection({
   }),
 });
 
+const team = defineCollection({
+  schema: z.object({
+    name: z.string(),
+    stack: z.enum(['Fullstack', 'Frontend', 'Backend']),
+    image: z.string(),
+    links: z.array(z.string().url()),
+  }),
+});
+
 export const collections = {
   features,
+  team,
 }
