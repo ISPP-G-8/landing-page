@@ -1,12 +1,12 @@
 ---
-const { name, stack, image, links } = Astro.props;
+const { name, stack, links, slug} = Astro.props;
 const githubLink: string = links[0];
 const linkedinLink: string = links[1];
 ---
 
 <div class="max-w-md bg-white rounded-xl shadow-lg">
   <div class="m-6 overflow-hidden rounded-xl aspect-[1/1]">
-    <img src={image} alt={name} class="w-full h-full object-cover" />
+	  <img src={`team/${slug}.png`} alt={name} class="w-full h-full object-cover" />
   </div>
   <div class="px-6 pb-6">
     <h2 class="text-xl font-bold text-gray-800 mb-2">{name}</h2>
