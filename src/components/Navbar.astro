@@ -6,7 +6,7 @@
 
     <a href="/" class="text-2xl font-bold text-gray-800">Nutribaby</a>
 
-    <nav class="hidden md:flex items-center space-x-6 text-gray-600 font-medium">
+    <nav id="menu" class="hidden flex-col absolute top-20 right-0 w-full items-end bg-gray-100 p-6 gap-y-4 shadow-md md:flex items-center space-x-6 text-gray-600 font-medium">
         <a href="/#main" class="hover:text-[#1D78AC] transition">Inicio</a>
         <a href="/#features" class="hover:text-[#1D78AC] transition">Características</a>
         <a href="/#plans" class="hover:text-[#1D78AC]  transition">Planes</a>
@@ -17,19 +17,12 @@
     <button id="menu-toggle" class="md:hidden text-gray-600">
         ☰
     </button>
-	<nav id="mobile-menu" class="absolute top-20 left-0 w-full bg-white shadow-md hidden flex-col items-center md:hidden">
-        <a href="#" class="py-3 text-gray-600 hover:text-blue-500">Inicio</a>
-        <a href="#" class="py-3 text-gray-600 hover:text-blue-500">Características</a>
-        <a href="#" class="py-3 text-gray-600 hover:text-blue-500">Planes</a>
-        <a href="#" class="py-3 text-gray-600 hover:text-blue-500">Equipo</a>
-        <a href="#" class="py-3 text-white bg-[#1D78AC] px-4 mb-4 rounded-lg hover:bg-blue-600 transition">Descargar</a>
-    </nav>
 </header>
 
 
 <script>
     const menuToggle = document.getElementById("menu-toggle") as HTMLButtonElement;
-    const menu = document.getElementById("mobile-menu") as HTMLElement;
+    const menu = document.getElementById("menu") as HTMLElement;
 
     if (menuToggle && menu) {
         menuToggle.addEventListener("click", () => {
