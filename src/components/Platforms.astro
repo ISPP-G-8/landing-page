@@ -1,0 +1,33 @@
+
+---
+const platforms = [
+  { name: "Web", icon: "🌍", description: "Accede desde cualquier navegador sin instalaciones." },
+  { name: "Android", icon: "📱", description: "Descárgala en Google Play y lleva NutriBaby contigo." },
+  { name: "iOS", icon: "🍏", description: "Disponible en la App Store para iPhone y iPad." },
+];
+---
+
+<!-- The idea is that each card will be a link to download the app in that platform -->
+
+<section id="platforms" class="py-12 mt-20 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
+      Disponible en todas las plataformas 
+    </h2>
+    <p class="text-lg text-gray-600 mb-8">
+      Disfruta de NutriBaby en cualquier dispositivo. ¡Siempre a tu alcance!
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {platforms.map((platform) => (
+        <div class="group bg-white shadow-lg rounded-3xl p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+          <div class="text-5xl mb-4 transition-all duration-300 group-hover:rotate-6">
+            {platform.icon}
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">{platform.name}</h3>
+          <p class="text-gray-600">{platform.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
