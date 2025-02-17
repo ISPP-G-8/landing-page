@@ -10,7 +10,7 @@ const team = await getCollection('team');
 	<div class="flex flex-col-reverse md:flex-row h-screen">
 		<div class="bg-[#1D78AC] w-full md:w-2/3 p-4 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 			{team.map((member) => (
-				<TeamMemberCard {...member.data} />
+			<TeamMemberCard {...member.data} slug={member.slug}/>
 			))}
 		</div>
 
