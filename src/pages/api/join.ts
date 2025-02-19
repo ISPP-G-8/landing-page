@@ -28,7 +28,7 @@ export const POST: APIRoute = async ({ request }) => {
   const { data, error } = await supabase
     .from('suscribers')
     .insert([
-      { "email": "user2@example.com" },
+      { "email": email },
     ])
     .select()
           
