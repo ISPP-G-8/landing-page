@@ -30,7 +30,9 @@ To run the landing page locally, follow these steps:
    npm install
    ```
 
-3. Start the development server:
+3. Create the environment variables on .env
+
+4. Start the development server:
    ```sh
    npm run dev
    ```
