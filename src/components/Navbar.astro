@@ -1,5 +1,5 @@
 ---
-
+const appEndpoint = import.meta.env.APP_ENDPOINT || "/";
 ---
 
 <header class="flex justify-between items-center px-8 lg:px-20 xl:px-60 h-20 bg-gray-100 shadow-md">
@@ -15,10 +15,9 @@
         <!-- <a href="/#plans" class="hover:text-[#1D78AC]  transition">Planes</a> -->
         <a href="/team" class="hover:text-[#1D78AC]  transition">Equipo</a>
 		
-		<!-- TODO: IDK why this only work with de id login and not with download. Gotta change it. --> 
-		<button id="login" class="cursor-pointer hover:bg-[#154e6f] text-white bg-[#1D78AC] px-4 py-2 rounded-xl transition">
-			Descargar
-		</button>
+        <a href={appEndpoint} id="login" class="cursor-pointer hover:bg-[#154e6f] text-white bg-[#1D78AC] px-4 py-2 rounded-xl transition">
+		    Visítanos	
+		</a>
     </nav>
     <button id="menu-toggle" class="lg:hidden text-gray-600">
         ☰
