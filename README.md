@@ -25,14 +25,24 @@ To run the landing page locally, follow these steps:
    cd landing-page 
    ```
 
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
+2. Install Dependencies
+
+2.1 Recommended Installation Method: Bun
+    We recommend using [Bun](https://bun.sh) for installing dependencies. If you don't have Bun installed, you can do so with:
+    ```sh
+    curl -fsSL https://bun.sh/install | bash
+    ```
+    **Note:** After installation, you may need to update your shell configuration file (e.g., `.bashrc`, `.zshrc`) to export the Bun binary path.
+
+2.2 Install Project Dependencies
+    Once Bun is installed, install the project dependencies:
+    ```sh
+    bun install  # As said, you can use npm or any package manager too.
+    ```
 
 3. Start the development server:
    ```sh
-   npm run dev
+   bun run dev  # As said, you can use npm or any package manager too.
    ```
 
 The site will be available at `http://127.0.0.1:7777`.
