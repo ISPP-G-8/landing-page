@@ -14,9 +14,9 @@ import Footer from "../components/Footer.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Infantem</title>
 	</head>
-	<body>
+    <body class="flex flex-col min-h-screen">
 		<Navbar />
-		<main>
+        <main class="flex-grow">
 			<slot />
 		</main>
 		<Footer />
