@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import Feature from '../components/Feature.astro';
+const features = await getCollection('features');
+---
+
+<section class="pt-12 sm:text-left mb-30">
+	<div class=" md:flex flex-wrap">
+		{features.map((feature, index) => {
+			return(
+			<Feature {...feature.data}/>
+			);
+		})}
+	</div>
+</section>

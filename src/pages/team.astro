@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import TeamMemberCard from '../components/TeamMemberCard.astro';
+
+const team = await getCollection('team');
+---
+
+<Layout>
+	<div class="flex flex-col-reverse md:flex-row h-screen">
+		<div class="bg-[#1D78AC] w-full md:w-2/3 p-4 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+			{team.map((member) => (
+			<TeamMemberCard {...member.data} slug={member.slug}/>
+			))}
+		</div>
+
+	  <div class="w-full md:w-1/3 flex flex-col justify-center items-center p-8">
+		<h1 class="text-4xl font-bold">Infantem</h1>
+		<p class="mt-4 text-lg text-center">
+		  Nuestro equipo está comprometido con brindar la mejor experiencia para la alimentación infantil basada en evidencia científica.
+		</p>
+	  </div>
+	</div>
+</Layout>
