@@ -17,34 +17,40 @@ NutriBaby is a web application designed to assist parents in introducing food to
 - **Deployment:** Vercel 
 
 ## Installation & Setup
+
 To run the landing page locally, follow these steps:
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/ISPP-G-8/landing-page 
-   cd landing-page 
-   ```
+### 1. Clone the Repository
 
-2. Install Dependencies
+```sh
+git clone https://github.com/ISPP-G-8/landing-page 
+cd landing-page 
+```
 
-2.1 Recommended Installation Method: Bun
-    We recommend using [Bun](https://bun.sh) for installing dependencies. If you don't have Bun installed, you can do so with:
-    ```sh
-    curl -fsSL https://bun.sh/install | bash
-    ```
-    **Note:** After installation, you may need to update your shell configuration file (e.g., `.bashrc`, `.zshrc`) to export the Bun binary path.
+### 2. Install Dependencies
 
-2.2 Install Project Dependencies
-    Once Bun is installed, install the project dependencies:
-    ```sh
-    bun install  # As said, you can use npm or any package manager too.
-    ```
+#### 2.1 Recommended Installation Method: Bun
 
-3. Start the development server:
-   ```sh
-   bun run dev  # As said, you can use npm or any package manager too.
-   ```
+We recommend using [Bun](https://bun.sh) for installing dependencies. If you don't have Bun installed, you can do so with:
+
+```sh
+curl -fsSL https://bun.sh/install | bash
+```
+
+**Note:** After installation, you may need to update your shell configuration file (e.g., `.bashrc`, `.zshrc`) to export the Bun binary path.
+
+#### 2.2 Install Project Dependencies
+
+Once Bun is installed, install the project dependencies:
+
+```sh
+bun install  # As said, you can use npm or any package manager too.
+```
+
+### 3. Start the Development Server
+
+```sh
+bun run dev  # As said, you can use npm or any package manager too.
+```
 
 The site will be available at `http://127.0.0.1:7777`.
-
-
