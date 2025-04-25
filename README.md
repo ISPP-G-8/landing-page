@@ -1,6 +1,6 @@
-# NutriBaby Landing Page
+# Infantem Landing Page
 
-NutriBaby is a web application designed to assist parents in introducing food to their babies with an evidence-based approach. This repository contains the source code for the landing page, providing an overview of the app, its features, and pricing plans.
+Infantem is a web application designed to assist parents in introducing food to their babies with an evidence-based approach. This repository contains the source code for the landing page, providing an overview of the app, its features, and pricing plans.
 
 ![App Screenshot](./public/app-screenshot.png)
 
