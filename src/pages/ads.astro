@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="flex flex-col items-center justify-around px-8 md:px-20 xl:px-60 mt-20 space-y-6 mb-20">
+    <h1 class="text-5xl font-bold text-gray-900 mb-10">Anuncios de Infantem</h1>
+
+    <video
+      id="adPlayer"
+      autoplay
+      loop
+      playsinline
+      class="rounded-2xl w-full shadow-lg sm:max-w-md lg:max-w-xl xl:max-w-3xl"
+    >
+      <source
+        id="adSource"
+        src="/ad1.mp4"
+        type="video/mp4"
+      />
+      Tu navegador no soporta el elemento de video.
+    </video>
+
+    <select
+      id="videoSelect"
+      class="mt-4 p-2 border rounded-lg"
+      aria-label="Selecciona un anuncio"
+    >
+      <option value="/ad1.mp4">Anuncio 1</option>
+      <option value="/ad2.mp4">Anuncio 2</option>
+      <option value="/ad3.mp4">Anuncio 3</option>
+    </select>
+  </div>
+
+  <script type="module">
+    const select = document.getElementById('videoSelect');
+    const video = document.getElementById('adPlayer');
+    const source = document.getElementById('adSource');
+
+    select.addEventListener('change', () => {
+      source.src = select.value;
+      video.load();
+      video.play();
+    });
+  </script>
+</Layout>
