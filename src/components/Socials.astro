@@ -1,0 +1,76 @@
+---
+const socials = [
+  {
+    name: "Facebook",
+    img: "/icons/facebook_icon.png",
+    url: "https://www.facebook.com/profile.php?id=61575126590487&sk=about_life_events",
+    description: "Únete a nuestra comunidad y mantente al día con las últimas novedades de Infantem.",
+  },
+  {
+    name: "Instagram",
+    img: "/icons/instagram_icon.png",
+    url: "https://www.instagram.com/infantemapp?igsh=MXFqNHZ4ZnJwZ29leQ==",
+    description: "Inspírate con contenido visual, recetas saludables y consejos para el día a día.",
+  },
+  {
+    name: "TikTok",
+    img: "/icons/tiktok_icon.webp",
+    url: "https://www.tiktok.com/@infantemapp?_t=ZN-8wLsatI6apS&_r=1",
+    description: "Mira vídeos cortos y divertidos sobre alimentación infantil.",
+  },
+  {
+    name: "LinkedIn",
+    img: "/icons/LinkedIn_icon.svg.webp",
+    url: "https://www.linkedin.com/in/infantem/",
+    description: "Explora el impacto de nuestro proyecto en el mundo profesional",
+  },
+];
+---
+
+<section id="socials" class="py-12 mt-20 px-6 bg-gray-100">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
+      Síguenos en redes sociales
+    </h2>
+    <p class="text-lg text-gray-600 mb-8">
+      Conéctate con Infantem y forma parte de nuestra comunidad.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+      {socials.map((social) => (
+        <a
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group bg-white shadow-lg rounded-3xl p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+        >
+          <img
+            src={social.img}
+            alt={social.name}
+            class="w-12 h-12 mx-auto mb-4 transition-transform duration-300 group-hover:scale-125"
+          />
+          <h3 class="text-xl font-semibold mb-2">{social.name}</h3>
+          <p class="text-gray-600 text-sm">{social.description}</p>
+        </a>
+      ))}
+    </div>
+
+    <!-- LightWidget Instagram Feed -->
+    <div id="instagram" class="mt-12">
+      <h3 class="text-2xl font-semibold mb-4">Últimas publicaciones en Instagram</h3>
+      <p class="text-gray-600 text-sm mb-6">
+        Echa un vistazo a nuestro contenido más reciente.
+      </p>
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <iframe
+          src="//lightwidget.com/widgets/6d85b01adf7b5ae58620f035476297a7.html"
+          scrolling="no"
+          allowtransparency="true"
+          class="lightwidget-widget w-full h-[500px]"
+          style="width:100%;border:0;overflow:hidden;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
