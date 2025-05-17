@@ -4,15 +4,31 @@ const articles = [
     title: 'Beneficios del BLW: autonomía y desarrollo',
     excerpt: 'Descubre cómo el Baby Led Weaning fomenta la independencia y una dieta saludable desde los primeros bocados.',
     img: '/newsletterpics/blw.jpg',
-    url: '/newsletter/blw_benefits_consequences',  
+    url: '/newsletter/blw_benefits_consequences',
+  },
+  {
+    title: 'Introducción temprana de alérgenos en la alimentación de tu bebé',
+    excerpt: 'Conoce por qué introducir alimentos como huevo, cacahuete o pescado desde los primeros meses puede prevenir alergias.',
+    img: '/newsletterpics/alergenos.jpg',
+    url: '/newsletter/alergenos_tempranos',
+  },
+  {
+    title: 'Alimentación materna durante la lactancia y su relación con las alergias en el bebé',
+    excerpt: '¿Sabías que lo que comes durante la lactancia puede influir en la tolerancia del bebé a ciertos alimentos? Descúbrelo aquí.',
+    img: '/newsletterpics/lactancia_alergias.jpg',
+    url: '/newsletter/alimentacion_lactancia',
+  },
+  {
+    title: '¿Cuándo está listo mi bebé para empezar la alimentación complementaria?',
+    excerpt: 'Detecta las señales que indican que tu bebé está preparado para comenzar con sólidos y cómo hacerlo paso a paso.',
+    img: '/newsletterpics/alimentacion_complementaria.jpg',
+    url: '/newsletter/alimentación_complementaria',
   }
 ];
 ---
 
-
-
 <section id="articles" class="py-12 mt-20 px-6 bg-gray-100">
-  <div class="max-w-5xl mx-auto text-center">
+  <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
       Últimos artículos sobre alimentación infantil
     </h2>
@@ -20,23 +36,23 @@ const articles = [
       Descubre consejos, novedades y recursos para acompañar a tu bebé en su alimentación.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-      {articles.map((article) => {
-        return (
-          <a
-            href={article.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group bg-white shadow-lg rounded-3xl p-6 text-left transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-          >
-            <img
-              src={article.img}
-              alt={article.title}
-              class="w-full h-48 object-cover mb-4 rounded-2xl transition-transform duration-300 group-hover:scale-105"
-            />
-            <h3 class="text-xl font-semibold mb-2">{article.title}</h3>
-            <p class="text-gray-600 text-sm">{article.excerpt}</p>
-          </a>
-        );
-      })}
+    <div class="flex overflow-x-auto space-x-6 pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
+      {articles.map((article) => (
+        <a
+          href={article.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group bg-white shadow-lg rounded-3xl p-6 text-left transition-transform duration-300 hover:scale-105 hover:shadow-2xl snap-start min-w-[300px] max-w-xs"
+        >
+          <img
+            src={article.img}
+            alt={article.title}
+            class="w-full h-48 object-cover mb-4 rounded-2xl transition-transform duration-300 group-hover:scale-105"
+          />
+          <h3 class="text-xl font-semibold mb-2">{article.title}</h3>
+          <p class="text-gray-600 text-sm">{article.excerpt}</p>
+        </a>
+      ))}
     </div>
+  </div>
+</section>
